@@ -11,21 +11,13 @@ You have four tasks, all related to the time spent cooking the lasagna.
 1. Define the expected oven time in minutes
 Define the OvenTime constant with how many minutes the lasagna should be in the oven. According to the
 cooking book, the expected oven time in minutes is 40:
-
 OvenTime
 // Output: 40 */
-const OvenTime = 40
 
 /*2. Calculate the remaining oven time in minutes
 Define the RemainingOvenTime() function that takes the actual minutes the lasagna has been in the oven
 as a parameter and returns how many minutes the lasagna still has to remain in the oven, based on the
 expected oven time in minutes from the previous task. */
-
-func RemainingOvenTime(actual int) int {
-	// TODO
-	return OvenTime - actual
-}
-
 //RemainingOvenTime(30)
 // Output: 10
 
@@ -33,12 +25,6 @@ func RemainingOvenTime(actual int) int {
 Define the PreparationTime function that takes the number of layers you added to the lasagna as a
 parameter and returns how many minutes you spent preparing the lasagna, assuming each layer takes you 2
 minutes to prepare. */
-
-func PreparationTime(numberOfLayers int) int {
-	// TODO
-	return 2 * numberOfLayers
-}
-
 //PreparationTime(2)
 // Output: 4
 
@@ -48,14 +34,25 @@ you added to the lasagna, and the second parameter is the number of minutes the 
 oven. The function should return how many minutes in total you've worked on cooking the lasagna, which
 is the sum of the preparation time in minutes, and the time in minutes the lasagna has spent in the
 oven at the moment. */
+//ElapsedTime(3, 20)
+// Output: 26 */
+
+const OvenTime = 40
+
+func RemainingOvenTime(actual int) int {
+	// TODO
+	return OvenTime - actual
+}
+
+func PreparationTime(numberOfLayers int) int {
+	// TODO
+	return 2 * numberOfLayers
+}
 
 func ElapsedTime(numberOfLayers, actualMinutesInOven int) int {
 	// TODO
 	return PreparationTime(numberOfLayers) + actualMinutesInOven
 }
-
-//ElapsedTime(3, 20)
-// Output: 26 */
 
 func main() {
 
