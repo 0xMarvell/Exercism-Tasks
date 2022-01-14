@@ -59,4 +59,5 @@ func main() {
 	fmt.Println(RemainingOvenTime(30))
 	fmt.Println(PreparationTime(2))
 	fmt.Println(ElapsedTime(3, 20))
+
 }
