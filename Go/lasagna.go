@@ -23,7 +23,7 @@ expected oven time in minutes from the previous task. */
 
 func RemainingOvenTime(actual int) int {
 	// TODO
-	return 1
+	return OvenTime - actual
 }
 
 //RemainingOvenTime(30)
@@ -36,7 +36,7 @@ minutes to prepare. */
 
 func PreparationTime(numberOfLayers int) int {
 	// TODO
-	return 1
+	return 2 * numberOfLayers
 }
 
 //PreparationTime(2)
@@ -51,12 +51,15 @@ oven at the moment. */
 
 func ElapsedTime(numberOfLayers, actualMinutesInOven int) int {
 	// TODO
-	return 1
+	return PreparationTime(numberOfLayers) + actualMinutesInOven
 }
 
 //ElapsedTime(3, 20)
 // Output: 26 */
 
 func main() {
-	fmt.Println("exercism")
+
+	fmt.Println(RemainingOvenTime(30))
+	fmt.Println(PreparationTime(2))
+	fmt.Println(ElapsedTime(3, 20))
 }
