@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*Instructions
 In this exercise you're going to write some code to help you cook a brilliant lasagna from your
 favorite cooking book.
@@ -54,10 +52,10 @@ func ElapsedTime(numberOfLayers, actualMinutesInOven int) int {
 	return PreparationTime(numberOfLayers) + actualMinutesInOven
 }
 
-func main() {
+// func main() {
 
-	fmt.Println(RemainingOvenTime(30))
-	fmt.Println(PreparationTime(2))
-	fmt.Println(ElapsedTime(3, 20))
+// 	fmt.Println(RemainingOvenTime(30))
+// 	fmt.Println(PreparationTime(2))
+// 	fmt.Println(ElapsedTime(3, 20))
 
-}
+// }
