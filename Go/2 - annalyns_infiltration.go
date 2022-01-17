@@ -57,10 +57,22 @@ func CanFastAttack(knightIsAwake bool) bool {
 	}
 }
 
+func CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake bool) bool {
+	//TODO
+	if knightIsAwake || archerIsAwake || prisonerIsAwake {
+		return true
+	} else {
+		return false
+	}
+}
+
 func main() {
 
 	//fmt.Println("Annalyn")
-	var knightIsAwake = true
-	fmt.Println(CanFastAttack(knightIsAwake))
+	var knightIsAwake = false
+	var archerIsAwake = true
+	var prisonerIsAwake = false
+	fmt.Println(CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
+	// fmt.Println(CanFastAttack(knightIsAwake))
 
 }
