@@ -48,8 +48,19 @@ var petDogIsPresent = false
 fmt.Println(CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent))
 // Output: false */
 
+func CanFastAttack(knightIsAwake bool) bool {
+	// TODO
+	if knightIsAwake {
+		return false
+	} else {
+		return true
+	}
+}
+
 func main() {
 
-	fmt.Println("Annalyn")
+	//fmt.Println("Annalyn")
+	var knightIsAwake = true
+	fmt.Println(CanFastAttack(knightIsAwake))
 
 }
