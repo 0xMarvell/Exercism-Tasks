@@ -70,6 +70,7 @@ func CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake bool) bool {
 }
 
 func CanSignalPrisoner(prisonerIsAwake, archerIsAwake bool) bool {
+	//TODO
 	if !prisonerIsAwake && archerIsAwake {
 		return true
 	} else {
@@ -77,14 +78,33 @@ func CanSignalPrisoner(prisonerIsAwake, archerIsAwake bool) bool {
 	}
 }
 
+func CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent bool) bool {
+	//TODO
+	return prisonerIsAwake && (!knightIsAwake && !archerIsAwake) || petDogIsPresent && !archerIsAwake
+}
+
 func main() {
 
-	//fmt.Println("Annalyn")
-	//var knightIsAwake = false
-	var archerIsAwake = false
-	var prisonerIsAwake = true
+	//1.
+	var knightIsAwake = true
+	fmt.Println(CanFastAttack(knightIsAwake))
+
+	//2.
+	knightIsAwake = false
+	var archerIsAwake = true
+	var prisonerIsAwake = false
+	fmt.Println(CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
+
+	//3.
+	archerIsAwake = false
+	prisonerIsAwake = true
 	fmt.Println(CanSignalPrisoner(archerIsAwake, prisonerIsAwake))
-	//fmt.Println(CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
-	// fmt.Println(CanFastAttack(knightIsAwake))
+
+	//4.
+	knightIsAwake = false
+	archerIsAwake = true
+	prisonerIsAwake = false
+	var petDogIsPresent = false
+	fmt.Println(CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent))
 
 }
