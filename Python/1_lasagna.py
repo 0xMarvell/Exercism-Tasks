@@ -27,9 +27,33 @@ Implement the elapsed_time_in_minutes() function that has two parameters: number
 Go back through the recipe, adding notes and documentation. """
 
 #def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
-    """
-    Return elapsed cooking time.
+    # """
+    # Return elapsed cooking time.
 
-    This function takes two numbers representing the number of layers & the time already spent 
-    baking and calculates the total elapsed minutes spent cooking the lasagna.
-    """
+    # This function takes two numbers representing the number of layers & the time already spent 
+    # baking and calculates the total elapsed minutes spent cooking the lasagna.
+    # """
+
+EXPECTED_BAKE_TIME = 40
+
+def bake_time_remaining(actual_minutes):
+    return EXPECTED_BAKE_TIME - actual_minutes
+
+def preparation_time_in_minutes(number_of_layers):
+    return number_of_layers * 2
+
+def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
+    return preparation_time_in_minutes(number_of_layers) + elapsed_bake_time
+
+#1.
+print(EXPECTED_BAKE_TIME)
+
+#2.
+print(bake_time_remaining(30))
+
+#3.
+print(preparation_time_in_minutes(2))
+
+#4.
+print(elapsed_time_in_minutes(3, 20))
+
