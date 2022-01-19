@@ -1,7 +1,3 @@
-package main
-
-import "fmt"
-
 /* Instructions
 In this exercise, you'll be implementing the quest logic for a new RPG game a friend is developing. The game's main character is Annalyn, a brave girl with a fierce and loyal pet dog. Unfortunately, disaster strikes, as her best friend was kidnapped while searching for berries in the forest. Annalyn will try to find and free her best friend, optionally taking her dog with her on this quest.
 
@@ -50,6 +46,9 @@ var prisonerIsAwake = false
 var petDogIsPresent = false
 fmt.Println(CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent))
 // Output: false */
+package main
+
+import "fmt"
 
 func CanFastAttack(knightIsAwake bool) bool {
 	// TODO

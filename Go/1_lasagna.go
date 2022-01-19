@@ -1,5 +1,3 @@
-package main
-
 /*Instructions
 In this exercise you're going to write some code to help you cook a brilliant lasagna from your
 favorite cooking book.
@@ -34,6 +32,7 @@ is the sum of the preparation time in minutes, and the time in minutes the lasag
 oven at the moment. */
 //ElapsedTime(3, 20)
 // Output: 26 */
+package main
 
 const OvenTime = 40
 
