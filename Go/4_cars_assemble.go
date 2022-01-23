@@ -37,6 +37,18 @@ package main
 
 import "fmt"
 
+func CalculateWorkingCarsPerHour() float64 {
+
+}
+
+func CalculateWorkingCarsPerMinute() int {
+
+}
+
+func CalculateCost() uint {
+
+}
+
 func main() {
 	fmt.Println("cars assemble")
 }
