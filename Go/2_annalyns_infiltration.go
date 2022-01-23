@@ -48,8 +48,6 @@ fmt.Println(CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDo
 // Output: false */
 package main
 
-import "fmt"
-
 func CanFastAttack(knightIsAwake bool) bool {
 	// TODO
 	if knightIsAwake {
@@ -82,28 +80,28 @@ func CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPres
 	return prisonerIsAwake && (!knightIsAwake && !archerIsAwake) || petDogIsPresent && !archerIsAwake
 }
 
-func main() {
+// func main() {
 
-	//1.
-	var knightIsAwake = true
-	fmt.Println(CanFastAttack(knightIsAwake))
+// 	//1.
+// 	var knightIsAwake = true
+// 	fmt.Println(CanFastAttack(knightIsAwake))
 
-	//2.
-	knightIsAwake = false
-	var archerIsAwake = true
-	var prisonerIsAwake = false
-	fmt.Println(CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
+// 	//2.
+// 	knightIsAwake = false
+// 	var archerIsAwake = true
+// 	var prisonerIsAwake = false
+// 	fmt.Println(CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake))
 
-	//3.
-	archerIsAwake = false
-	prisonerIsAwake = true
-	fmt.Println(CanSignalPrisoner(archerIsAwake, prisonerIsAwake))
+// 	//3.
+// 	archerIsAwake = false
+// 	prisonerIsAwake = true
+// 	fmt.Println(CanSignalPrisoner(archerIsAwake, prisonerIsAwake))
 
-	//4.
-	knightIsAwake = false
-	archerIsAwake = true
-	prisonerIsAwake = false
-	var petDogIsPresent = false
-	fmt.Println(CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent))
+// 	//4.
+// 	knightIsAwake = false
+// 	archerIsAwake = true
+// 	prisonerIsAwake = false
+// 	var petDogIsPresent = false
+// 	fmt.Println(CanFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent))
 
-}
+// }
