@@ -38,15 +38,15 @@ package main
 import "fmt"
 
 func CalculateWorkingCarsPerHour() float64 {
-
+	return float64(1)
 }
 
 func CalculateWorkingCarsPerMinute() int {
-
+	return 1
 }
 
 func CalculateCost() uint {
-
+	return uint(1)
 }
 
 func main() {
