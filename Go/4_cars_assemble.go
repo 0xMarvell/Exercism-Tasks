@@ -35,31 +35,36 @@ Note: the return value should be an uint. */
 
 package cars
 
-import "fmt"
-
 // CalculateWorkingCarsPerHour calculates how many working cars are
 // produced by the assembly line every hour
 func CalculateWorkingCarsPerHour(productionRate int, successRate float64) float64 {
-	//panic("CalculateWorkingCarsPerHour not implemented")
 	return float64(productionRate) * (successRate / 100)
 }
 
 // CalculateWorkingCarsPerMinute calculates how many working cars are
 // produced by the assembly line every minute
 func CalculateWorkingCarsPerMinute(productionRate int, successRate float64) int {
-	//panic("CalculateWorkingCarsPerMinute not implemented")
-	return int(CalculateWorkingCarsPerHour(productionRate, successRate) * 60)
+	return int(CalculateWorkingCarsPerHour(productionRate, successRate) / 60)
 }
 
 // CalculateCost works out the cost of producing the given number of cars
 func CalculateCost(carsCount int) uint {
-	//panic("CalculateCost not implemented")
 	groupsOfTens := carsCount / 10
 	singles := carsCount % 10
 	return uint((95000 * groupsOfTens) + (10000 * singles))
 
 }
 
-func main() {
-	fmt.Println("cars assemble")
-}
+// func main() {
+// 	fmt.Println("cars assemble")
+// 	rate := CalculateWorkingCarsPerHour(1547, 90)
+// 	rate1 := CalculateWorkingCarsPerMinute(1105, 90)
+// 	cost := CalculateCost(37)
+// 	cost1 := CalculateCost(21)
+
+// 	fmt.Println(rate)
+// 	fmt.Println(rate1)
+// 	fmt.Println(cost)
+// 	fmt.Println(cost1)
+
+// }
