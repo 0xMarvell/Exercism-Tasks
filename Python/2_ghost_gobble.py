@@ -82,3 +82,14 @@ def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
     else:
         return False
 
+#1.
+print(eat_ghost(False, True))
+
+#2.
+print(score(True, True))
+
+#3.
+print(lose(False, True))
+
+#4.
+print(win(False, True, False))
