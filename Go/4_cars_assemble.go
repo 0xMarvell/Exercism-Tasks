@@ -33,20 +33,25 @@ cost = CalculateCost(21)
 // Output: 200000
 Note: the return value should be an uint. */
 
-package main
+package cars
 
 import "fmt"
 
-func CalculateWorkingCarsPerHour() float64 {
-	return float64(1)
+// CalculateWorkingCarsPerHour calculates how many working cars are
+// produced by the assembly line every hour
+func CalculateWorkingCarsPerHour(productionRate int, successRate float64) float64 {
+	panic("CalculateWorkingCarsPerHour not implemented")
 }
 
-func CalculateWorkingCarsPerMinute() int {
-	return 1
+// CalculateWorkingCarsPerMinute calculates how many working cars are
+// produced by the assembly line every minute
+func CalculateWorkingCarsPerMinute(productionRate int, successRate float64) int {
+	panic("CalculateWorkingCarsPerMinute not implemented")
 }
 
-func CalculateCost() uint {
-	return uint(1)
+// CalculateCost works out the cost of producing the given number of cars
+func CalculateCost(carsCount int) uint {
+	panic("CalculateCost not implemented")
 }
 
 func main() {
