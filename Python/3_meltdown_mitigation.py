@@ -98,7 +98,7 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
     elif efficiency < 30:
         return "black"
 
-print(reactor_efficiency(200,50,15000))
+# print(reactor_efficiency(200,50,15000))
 
 def fail_safe(temperature, neutrons_produced_per_second, threshold):
     """Assess and return status code for the reactor.
@@ -112,3 +112,12 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
     - `temperature * neutrons per second` +/- 10% of `threshold` == 'NORMAL'
     - `temperature * neutrons per second` is not in the above-stated ranges ==  'DANGER'
     """
+    v= temperature * neutrons_produced_per_second
+    if v < (.9 * threshold):
+        return "LOW"
+    elif v >= (.9 * threshold) and v <= (1.1 * threshold):
+        return "NORMAL"
+    else:
+        return "DANGER"
+
+print(fail_safe(temperature=1000, neutrons_produced_per_second=30, threshold=5000))
