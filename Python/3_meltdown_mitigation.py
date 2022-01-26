@@ -57,14 +57,7 @@ def is_criticality_balanced(temperature, neutrons_emitted):
     - The number of neutrons emitted per second is greater than 500.
     - The product of temperature and neutrons emitted per second is less than 500000.
     """
-    if (temperature < 800 and neutrons_emitted > 500) and temperature * neutrons_emitted < 500000:
-        return True
-    else:
-        return False
-
-    
-
-# print(is_criticality_balanced(750, 600))
+    return (temperature < 800 and neutrons_emitted > 500) and temperature * neutrons_emitted < 500000
 
 
 def reactor_efficiency(voltage, current, theoretical_max_power):
@@ -89,16 +82,15 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
     generated_power = voltage * current
     efficiency = (generated_power/ theoretical_max_power)*100
 
-    if efficiency >= 80:
-        return "green"
+    if efficiency < 30:
+        return "black"
     elif 80 > efficiency >= 60:
         return "orange"
     elif 60 > efficiency >= 30:
         return "red"
-    elif efficiency < 30:
-        return "black"
+    else:
+        return "green"
 
-# print(reactor_efficiency(200,50,15000))
 
 def fail_safe(temperature, neutrons_produced_per_second, threshold):
     """Assess and return status code for the reactor.
@@ -112,12 +104,17 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
     - `temperature * neutrons per second` +/- 10% of `threshold` == 'NORMAL'
     - `temperature * neutrons per second` is not in the above-stated ranges ==  'DANGER'
     """
-    v= temperature * neutrons_produced_per_second
-    if v < (.9 * threshold):
+    meltdown_range= temperature * neutrons_produced_per_second
+    if meltdown_range < (.9 * threshold):
         return "LOW"
-    elif v >= (.9 * threshold) and v <= (1.1 * threshold):
+    elif (1.1 * threshold) >= meltdown_range >= (.9 * threshold):
         return "NORMAL"
     else:
         return "DANGER"
+
+
+print(is_criticality_balanced(750, 600))
+
+print(reactor_efficiency(200,50,15000))
 
 print(fail_safe(temperature=1000, neutrons_produced_per_second=30, threshold=5000))
