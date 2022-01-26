@@ -36,9 +36,14 @@ CleanUpMessage(message)
 
 package techpalace
 
+import (
+	"fmt"
+	"strings"
+)
+
 // WelcomeMessage returns a welcome message for the customer.
 func WelcomeMessage(customer string) string {
-	panic("Please implement the WelcomeMessage() function")
+	fmt.Printf("Welcome to the Tech Palace, %s", strings.ToUpper(customer))
 }
 
 // AddBorder adds a border to a welcome message.
