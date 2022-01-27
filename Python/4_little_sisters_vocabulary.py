@@ -100,6 +100,9 @@ def remove_suffix_ness(word):
         orgin = orgin[:-1] + "y"
     return orgin
 
+# print(remove_suffix_ness("heaviness"))
+# print(remove_suffix_ness("sadness"))
+
 
 def adjective_to_verb(sentence, index):
     """
@@ -114,4 +117,19 @@ def adjective_to_verb(sentence, index):
     adjective as a verb.
     """
 
-    pass
+    sentence = sentence.split()
+    if "." in sentence[index]:
+        nu = sentence[index].replace(".","")
+        return nu + "en"
+
+    return sentence[index] + "en"
+
+
+#1.
+#2.
+#3.
+#4.
+
+
+print(adjective_to_verb('I need to make that bright.', -1 ))
+print(adjective_to_verb('It got dark as the sun set.', 2))
