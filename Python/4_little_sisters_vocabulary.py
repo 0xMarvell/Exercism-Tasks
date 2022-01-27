@@ -66,8 +66,6 @@ def add_prefix_un(word):
 
     return "un"+word
 
-# print(add_prefix_un("cool"))
-
 
 def make_word_groups(vocab_words):
     """
@@ -83,8 +81,6 @@ def make_word_groups(vocab_words):
     prefix = vocab_words[0]
     return " :: ".join([prefix + word if prefix != word else word for word in vocab_words])
 
-# print(make_word_groups(['pre', 'serve', 'dispose', 'position']))
-
 
 def remove_suffix_ness(word):
     """
@@ -99,9 +95,6 @@ def remove_suffix_ness(word):
     if orgin[-1] == "i":
         orgin = orgin[:-1] + "y"
     return orgin
-
-# print(remove_suffix_ness("heaviness"))
-# print(remove_suffix_ness("sadness"))
 
 
 def adjective_to_verb(sentence, index):
@@ -126,10 +119,19 @@ def adjective_to_verb(sentence, index):
 
 
 #1.
+print(add_prefix_un("cool"))
+print(add_prefix_un("manageable"))
+
 #2.
+print(make_word_groups(['en', 'close', 'joy', 'lighten']))
+print(make_word_groups(['pre', 'serve', 'dispose', 'position']))
+print(make_word_groups(['auto', 'didactic', 'graph', 'mate']))
+print(make_word_groups(['inter', 'twine', 'connected', 'dependent']))
+
 #3.
+print(remove_suffix_ness("heaviness"))
+print(remove_suffix_ness("sadness"))
+
 #4.
-
-
 print(adjective_to_verb('I need to make that bright.', -1 ))
 print(adjective_to_verb('It got dark as the sun set.', 2))
