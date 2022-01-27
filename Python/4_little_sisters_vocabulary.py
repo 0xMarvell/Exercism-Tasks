@@ -112,8 +112,8 @@ def adjective_to_verb(sentence, index):
 
     sentence = sentence.split()
     if "." in sentence[index]:
-        nu = sentence[index].replace(".","")
-        return nu + "en"
+        fix_up = sentence[index].replace(".","")
+        return fix_up + "en"
 
     return sentence[index] + "en"
 
