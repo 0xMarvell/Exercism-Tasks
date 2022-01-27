@@ -29,19 +29,34 @@ AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298)
 // You have been assigned to table 027. Your table is on the left, exactly 23.8 meters from here.
 // You will be sitting next to Frank. */
 
-package partyrobot
+//package partyrobot
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
 
 // Welcome greets a person by name.
 func Welcome(name string) string {
-	panic("Please implement the Welcome function")
+	//panic("Please implement the Welcome function"
+	return fmt.Sprintf("Welcome to my party, %s", name)
 }
 
 // HappyBirthday wishes happy birthday to the birthday person and exclaims their age.
 func HappyBirthday(name string, age int) string {
-	panic("Please implement the HappyBirthday function")
+	//panic("Please implement the HappyBirthday function")
+	return "Happy Birthday " + name + "!" + " " + "You are now " + strconv.Itoa(age) + " years old!"
 }
 
 // AssignTable assigns a table to each guest.
 func AssignTable(name string, table int, neighbor, direction string, distance float64) string {
 	panic("Please implement the AssignTable function")
+}
+
+func main() {
+
+	fmt.Println(Welcome("Marv"))
+	fmt.Println(HappyBirthday("Marv", 22))
+
 }
