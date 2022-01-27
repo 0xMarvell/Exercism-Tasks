@@ -44,17 +44,11 @@ func Welcome(name string) string {
 
 // HappyBirthday wishes happy birthday to the birthday person and exclaims their age.
 func HappyBirthday(name string, age int) string {
-	//panic("Please implement the HappyBirthday function")
-	// return "Happy Birthday " + name + "!" + " " + "You are now " + strconv.Itoa(age) + " years old!"
-	return fmt.Sprintf("Happy Birthday %s! You are now years %d old!", name, age)
+	return fmt.Sprintf("Happy Birthday %s! You are now %d years old!", name, age)
 }
 
 // AssignTable assigns a table to each guest.
 func AssignTable(name string, table int, neighbor, direction string, distance float64) string {
-	//panic("Please implement the AssignTable function")
-
-	// You have been assigned to table %03d. Your table is %s, exactly %.1f meters from here.\n
-	// You will be sitting next to %s.,name,table,direction,distance,neighbor
 	msg := Welcome(name) + "\n"
 	msg += fmt.Sprintf("You have been assigned to table %03d. Your table is %s,", table, direction)
 	msg += fmt.Sprintf(" exactly %.1f meters from here.\nYou will be sitting next to %s.", distance, neighbor)
