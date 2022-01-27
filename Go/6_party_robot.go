@@ -38,7 +38,6 @@ import (
 
 // Welcome greets a person by name.
 func Welcome(name string) string {
-	//panic("Please implement the Welcome function"
 	return fmt.Sprintf("Welcome to my party, %s", name)
 }
 
