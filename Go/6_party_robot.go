@@ -29,21 +29,18 @@ AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298)
 // You have been assigned to table 027. Your table is on the left, exactly 23.8 meters from here.
 // You will be sitting next to Frank. */
 
-//package partyrobot
-package main
+package partyrobot
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // Welcome greets a person by name.
 func Welcome(name string) string {
-	return fmt.Sprintf("Welcome to my party, %s", name)
+	return fmt.Sprintf("Welcome to my party, %s!", name)
 }
 
 // HappyBirthday wishes happy birthday to the birthday person and exclaims their age.
 func HappyBirthday(name string, age int) string {
-	return fmt.Sprintf("Happy Birthday %s! You are now %d years old!", name, age)
+	return fmt.Sprintf("Happy birthday %s! You are now %d years old!", name, age)
 }
 
 // AssignTable assigns a table to each guest.
@@ -55,10 +52,10 @@ func AssignTable(name string, table int, neighbor, direction string, distance fl
 	return msg
 }
 
-func main() {
+// func main() {
 
-	fmt.Println(Welcome("Marv"))
-	fmt.Println(HappyBirthday("Marv", 22))
-	fmt.Println(AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298))
+// 	fmt.Println(Welcome("Marv"))
+// 	fmt.Println(HappyBirthday("Marv", 22))
+// 	fmt.Println(AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298))
 
-}
+// }
