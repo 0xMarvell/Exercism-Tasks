@@ -34,7 +34,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 // Welcome greets a person by name.
@@ -46,7 +45,8 @@ func Welcome(name string) string {
 // HappyBirthday wishes happy birthday to the birthday person and exclaims their age.
 func HappyBirthday(name string, age int) string {
 	//panic("Please implement the HappyBirthday function")
-	return "Happy Birthday " + name + "!" + " " + "You are now " + strconv.Itoa(age) + " years old!"
+	// return "Happy Birthday " + name + "!" + " " + "You are now " + strconv.Itoa(age) + " years old!"
+	return fmt.Sprintf("Happy Birthday %s! You are now years %d old!", name, age)
 }
 
 // AssignTable assigns a table to each guest.
