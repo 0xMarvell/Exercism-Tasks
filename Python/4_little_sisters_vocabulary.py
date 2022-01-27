@@ -64,7 +64,9 @@ def add_prefix_un(word):
     returns a new word with an 'un' prefix.
     """
 
-    pass
+    return "un"+word
+
+# print(add_prefix_un("cool"))
 
 
 def make_word_groups(vocab_words):
@@ -78,8 +80,10 @@ def make_word_groups(vocab_words):
     with the prefix  and the words with prefix applied, separated
      by ' :: '.
     """
+    prefix = vocab_words[0]
+    return " :: ".join([prefix + word if prefix != word else word for word in vocab_words])
 
-    pass
+# print(make_word_groups(['pre', 'serve', 'dispose', 'position']))
 
 
 def remove_suffix_ness(word):
