@@ -95,7 +95,10 @@ def remove_suffix_ness(word):
     This function takes in a word and returns the base word with `ness` removed.
     """
 
-    pass
+    orgin = word[:-4]
+    if orgin[-1] == "i":
+        orgin = orgin[:-1] + "y"
+    return orgin
 
 
 def adjective_to_verb(sentence, index):
