@@ -109,7 +109,12 @@ def higher_card(card_one, card_two):
     :return: higher value card - str. Tuple of both cards if they are of equal value.
     """
 
-    
+    if card_one > card_two:
+        return card_one
+    elif card_one == card_two:
+        return card_one, card_two
+    else:
+        return card_two
 
 
 def value_of_ace(card_one, card_two):
@@ -128,4 +133,6 @@ print(value_of_card('K'))
 print(value_of_card('A'))
 
 #2.
-
+print(higher_card('K', '10'))
+print(higher_card('4', '6'))
+print(higher_card('K', 'A'))
