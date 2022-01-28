@@ -94,7 +94,12 @@ def value_of_card(card):
     :return: int - value of a given card. 'J', 'Q', 'K' = 10; 'A' = 1; numerical value otherwise.
     """
 
-    pass
+    if card == 'J' or card == 'K' or card == 'Q':
+        return 10
+    elif card == 'A':
+        return 1
+    else:
+        return "Error: invalid input"
 
 
 def higher_card(card_one, card_two):
@@ -104,7 +109,7 @@ def higher_card(card_one, card_two):
     :return: higher value card - str. Tuple of both cards if they are of equal value.
     """
 
-    pass
+    
 
 
 def value_of_ace(card_one, card_two):
@@ -115,3 +120,12 @@ def value_of_ace(card_one, card_two):
     """
 
     pass
+
+
+#1.
+print(value_of_card('J'))
+print(value_of_card('K'))
+print(value_of_card('A'))
+
+#2.
+
