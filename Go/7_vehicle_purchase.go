@@ -59,7 +59,15 @@ func ChooseVehicle(option1, option2 string) string {
 
 // CalculateResellPrice calculates how much a vehicle can resell for at a certain age.
 func CalculateResellPrice(originalPrice, age float64) float64 {
-	panic("CalculateResellPrice not implemented")
+	//panic("CalculateResellPrice not implemented")
+
+	if age >= 10 {
+		return 0.7 * originalPrice
+	} else if age >= 3 && age <= 10 {
+		return 0.5 * originalPrice
+	} else {
+		return 0.8 * originalPrice
+	}
 }
 
 func main() {
@@ -68,4 +76,9 @@ func main() {
 	fmt.Println(needLicense)
 	vehicle := ChooseVehicle("Wuling Hongguang", "Toyota Corolla")
 	fmt.Println(vehicle)
+	vehicle = ChooseVehicle("Volkswagen Beetle", "Volkswagen Golf")
+	fmt.Println(vehicle)
+	fmt.Println(CalculateResellPrice(1000, 1))
+	fmt.Println(CalculateResellPrice(1000, 5))
+	fmt.Println(CalculateResellPrice(1000, 15))
 }
