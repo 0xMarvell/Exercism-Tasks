@@ -49,7 +49,12 @@ func NeedsLicense(kind string) bool {
 
 // ChooseVehicle recommends a vehicle for selection. It always recommends the vehicle that comes first in dictionary order.
 func ChooseVehicle(option1, option2 string) string {
-	panic("ChooseVehicle not implemented")
+	//panic("ChooseVehicle not implemented")
+	if option1 < option2 {
+		return option1 + " is clearly the better choice."
+	} else {
+		return option2 + " is clearly the better choice."
+	}
 }
 
 // CalculateResellPrice calculates how much a vehicle can resell for at a certain age.
@@ -61,4 +66,6 @@ func main() {
 
 	needLicense := NeedsLicense("car")
 	fmt.Println(needLicense)
+	vehicle := ChooseVehicle("Wuling Hongguang", "Toyota Corolla")
+	fmt.Println(vehicle)
 }
