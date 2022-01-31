@@ -36,20 +36,15 @@ CalculateResellPrice(1000, 15)
 // Output: 500
 Note the return value is a float64. */
 
-// package purchase
-package main
-
-import "fmt"
+package purchase
 
 // NeedsLicense determines whether a license is needed to drive a type of vehicle. Only "car" and "truck" require a license.
 func NeedsLicense(kind string) bool {
-	//panic("NeedsLicense not implemented")
 	return kind == "car" || kind == "truck"
 }
 
 // ChooseVehicle recommends a vehicle for selection. It always recommends the vehicle that comes first in dictionary order.
 func ChooseVehicle(option1, option2 string) string {
-	//panic("ChooseVehicle not implemented")
 	if option1 < option2 {
 		return option1 + " is clearly the better choice."
 	} else {
@@ -59,8 +54,6 @@ func ChooseVehicle(option1, option2 string) string {
 
 // CalculateResellPrice calculates how much a vehicle can resell for at a certain age.
 func CalculateResellPrice(originalPrice, age float64) float64 {
-	//panic("CalculateResellPrice not implemented")
-
 	if age >= 10 {
 		return 0.7 * originalPrice
 	} else if age >= 3 && age <= 10 {
@@ -70,15 +63,15 @@ func CalculateResellPrice(originalPrice, age float64) float64 {
 	}
 }
 
-func main() {
+// func main() {
 
-	needLicense := NeedsLicense("car")
-	fmt.Println(needLicense)
-	vehicle := ChooseVehicle("Wuling Hongguang", "Toyota Corolla")
-	fmt.Println(vehicle)
-	vehicle = ChooseVehicle("Volkswagen Beetle", "Volkswagen Golf")
-	fmt.Println(vehicle)
-	fmt.Println(CalculateResellPrice(1000, 1))
-	fmt.Println(CalculateResellPrice(1000, 5))
-	fmt.Println(CalculateResellPrice(1000, 15))
-}
+// 	needLicense := NeedsLicense("car")
+// 	fmt.Println(needLicense)
+// 	vehicle := ChooseVehicle("Wuling Hongguang", "Toyota Corolla")
+// 	fmt.Println(vehicle)
+// 	vehicle = ChooseVehicle("Volkswagen Beetle", "Volkswagen Golf")
+// 	fmt.Println(vehicle)
+// 	fmt.Println(CalculateResellPrice(1000, 1))
+// 	fmt.Println(CalculateResellPrice(1000, 5))
+// 	fmt.Println(CalculateResellPrice(1000, 15))
+// }
