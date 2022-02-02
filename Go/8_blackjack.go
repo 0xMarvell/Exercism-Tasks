@@ -123,7 +123,17 @@ func LargeHand(isBlackjack bool, dealerScore int) string {
 
 // SmallHand implements the decision tree for hand scores with less than 21 points.
 func SmallHand(handScore, dealerScore int) string {
-	panic("Please implement the SmallHand function")
+	//panic("Please implement the SmallHand function")
+	switch {
+	case handScore >= 17:
+		return "S"
+	case handScore <= 11:
+		return "H"
+	case (handScore >= 12 && handScore <= 16) && dealerScore < 7:
+		return "S"
+	default:
+		return "H"
+	}
 }
 
 func main() {
