@@ -61,7 +61,7 @@ choice := SmallHand(handScore, dealerScore)
 fmt.Println(choice)
 // Output: "H" */
 
-//package blackjack
+package blackjack
 
 // ParseCard returns the integer value of a card following blackjack ruleset.
 func ParseCard(card string) int {
@@ -130,17 +130,17 @@ func SmallHand(handScore, dealerScore int) string {
 	}
 }
 
-func main() {
-	value := ParseCard("blue")
-	fmt.Println(value)
-	isBlackjack := IsBlackjack("queen", "ace")
-	fmt.Println(isBlackjack)
-	isBlackJack := true
-	dealerScore := 7
-	choice := LargeHand(isBlackJack, dealerScore)
-	fmt.Println(choice)
-	handScore := 15
-	dealerScore = 12
-	choice = SmallHand(handScore, dealerScore)
-	fmt.Println(choice)
-}
+// func main() {
+// 	value := ParseCard("blue")
+// 	fmt.Println(value)
+// 	isBlackjack := IsBlackjack("queen", "ace")
+// 	fmt.Println(isBlackjack)
+// 	isBlackJack := true
+// 	dealerScore := 7
+// 	choice := LargeHand(isBlackJack, dealerScore)
+// 	fmt.Println(choice)
+// 	handScore := 15
+// 	dealerScore = 12
+// 	choice = SmallHand(handScore, dealerScore)
+// 	fmt.Println(choice)
+// }
