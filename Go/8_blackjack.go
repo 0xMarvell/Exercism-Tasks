@@ -99,7 +99,13 @@ func ParseCard(card string) int {
 
 // IsBlackjack returns true if the player has a blackjack, false otherwise.
 func IsBlackjack(card1, card2 string) bool {
-	panic("Please implement the IsBlackjack function")
+	//panic("Please implement the IsBlackjack function")
+	switch {
+	case ParseCard(card1)+ParseCard(card2) == 21:
+		return true
+	default:
+		return false
+	}
 }
 
 // LargeHand implements the decision tree for hand scores larger than 20 points.
@@ -115,4 +121,6 @@ func SmallHand(handScore, dealerScore int) string {
 func main() {
 	value := ParseCard("blue")
 	fmt.Println(value)
+	isBlackjack := IsBlackjack("queen", "ace")
+	fmt.Println(isBlackjack)
 }
