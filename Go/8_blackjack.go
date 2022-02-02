@@ -61,11 +61,40 @@ choice := SmallHand(handScore, dealerScore)
 fmt.Println(choice)
 // Output: "H" */
 
-package blackjack
+//package blackjack
+package main
+
+import "fmt"
 
 // ParseCard returns the integer value of a card following blackjack ruleset.
 func ParseCard(card string) int {
-	panic("Please implement the ParseCard function")
+	//panic("Please implement the ParseCard function")
+	switch card {
+	case "ace":
+		return 11
+	case "two":
+		return 2
+	case "three":
+		return 3
+	case "four":
+		return 4
+	case "five":
+		return 5
+	case "six":
+		return 6
+	case "seven":
+		return 7
+	case "eight":
+		return 8
+	case "nine":
+		return 9
+	case "ten":
+		return 10
+	case "other":
+		return 0
+	default:
+		return 10
+	}
 }
 
 // IsBlackjack returns true if the player has a blackjack, false otherwise.
@@ -81,4 +110,9 @@ func LargeHand(isBlackjack bool, dealerScore int) string {
 // SmallHand implements the decision tree for hand scores with less than 21 points.
 func SmallHand(handScore, dealerScore int) string {
 	panic("Please implement the SmallHand function")
+}
+
+func main() {
+	value := ParseCard("blue")
+	fmt.Println(value)
 }
