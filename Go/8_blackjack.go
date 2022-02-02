@@ -62,13 +62,9 @@ fmt.Println(choice)
 // Output: "H" */
 
 //package blackjack
-package main
-
-import "fmt"
 
 // ParseCard returns the integer value of a card following blackjack ruleset.
 func ParseCard(card string) int {
-	//panic("Please implement the ParseCard function")
 	switch card {
 	case "ace":
 		return 11
@@ -99,7 +95,6 @@ func ParseCard(card string) int {
 
 // IsBlackjack returns true if the player has a blackjack, false otherwise.
 func IsBlackjack(card1, card2 string) bool {
-	//panic("Please implement the IsBlackjack function")
 	switch {
 	case ParseCard(card1)+ParseCard(card2) == 21:
 		return true
@@ -123,7 +118,6 @@ func LargeHand(isBlackjack bool, dealerScore int) string {
 
 // SmallHand implements the decision tree for hand scores with less than 21 points.
 func SmallHand(handScore, dealerScore int) string {
-	//panic("Please implement the SmallHand function")
 	switch {
 	case handScore >= 17:
 		return "S"
