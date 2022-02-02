@@ -110,7 +110,15 @@ func IsBlackjack(card1, card2 string) bool {
 
 // LargeHand implements the decision tree for hand scores larger than 20 points.
 func LargeHand(isBlackjack bool, dealerScore int) string {
-	panic("Please implement the LargeHand function")
+	//panic("Please implement the LargeHand function")
+	switch {
+	case isBlackjack == true && dealerScore < 10:
+		return "W"
+	case isBlackjack == true && dealerScore >= 10:
+		return "S"
+	default:
+		return "P"
+	}
 }
 
 // SmallHand implements the decision tree for hand scores with less than 21 points.
@@ -123,4 +131,8 @@ func main() {
 	fmt.Println(value)
 	isBlackjack := IsBlackjack("queen", "ace")
 	fmt.Println(isBlackjack)
+	isBlackJack := true
+	dealerScore := 7
+	choice := LargeHand(isBlackJack, dealerScore)
+	fmt.Println(choice)
 }
