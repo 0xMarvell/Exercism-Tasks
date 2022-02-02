@@ -145,4 +145,8 @@ func main() {
 	dealerScore := 7
 	choice := LargeHand(isBlackJack, dealerScore)
 	fmt.Println(choice)
+	handScore := 15
+	dealerScore = 12
+	choice = SmallHand(handScore, dealerScore)
+	fmt.Println(choice)
 }
