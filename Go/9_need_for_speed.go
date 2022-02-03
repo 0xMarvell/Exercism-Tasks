@@ -49,9 +49,11 @@ CanFinish(car, raceTrack)
 
 package speed
 
-// TODO: define the 'Car' type struct
 type Car struct {
 	battery, batteryDrain, speed, distance int
+}
+type Track struct {
+	distance int
 }
 
 // NewCar creates a new remote controlled car with full battery and given specifications.
@@ -62,10 +64,6 @@ func NewCar(speed, batteryDrain int) Car {
 		batteryDrain: batteryDrain,
 	}
 	return car
-}
-
-type Track struct {
-	distance int
 }
 
 // NewTrack created a new track
