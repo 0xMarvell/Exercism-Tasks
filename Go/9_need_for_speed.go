@@ -92,5 +92,7 @@ func Drive(car Car) Car {
 
 // CanFinish checks if a car is able to finish a certain track.
 func CanFinish(car Car, track Track) bool {
-	panic("Please implement the CanFinish function")
+	//panic("Please implement the CanFinish function")
+	max_distance := ((car.battery / car.batteryDrain) * car.speed) + car.distance
+	return max_distance >= track.distance
 }
