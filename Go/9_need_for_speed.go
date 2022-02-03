@@ -72,7 +72,11 @@ type Track struct {
 
 // NewTrack created a new track
 func NewTrack(distance int) Track {
-	panic("Please implement the NewTrack function")
+	//panic("Please implement the NewTrack function")
+	track := Track{
+		distance: distance,
+	}
+	return track
 }
 
 // Drive drives the car one time. If there is not enough battery to drive on more time,
