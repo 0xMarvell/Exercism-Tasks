@@ -56,7 +56,6 @@ type Car struct {
 
 // NewCar creates a new remote controlled car with full battery and given specifications.
 func NewCar(speed, batteryDrain int) Car {
-	//panic("Please implement the NewCar function")
 	car := Car{
 		battery:      100,
 		speed:        speed,
@@ -65,14 +64,12 @@ func NewCar(speed, batteryDrain int) Car {
 	return car
 }
 
-// TODO: define the 'Track' type struct
 type Track struct {
 	distance int
 }
 
 // NewTrack created a new track
 func NewTrack(distance int) Track {
-	//panic("Please implement the NewTrack function")
 	track := Track{
 		distance: distance,
 	}
@@ -82,7 +79,6 @@ func NewTrack(distance int) Track {
 // Drive drives the car one time. If there is not enough battery to drive on more time,
 // the car will not move.
 func Drive(car Car) Car {
-	//panic("Please implement the Drive function")
 	if car.battery > car.batteryDrain {
 		car.distance = car.speed
 		car.battery = car.battery - car.batteryDrain
@@ -92,7 +88,6 @@ func Drive(car Car) Car {
 
 // CanFinish checks if a car is able to finish a certain track.
 func CanFinish(car Car, track Track) bool {
-	//panic("Please implement the CanFinish function")
 	max_distance := ((car.battery / car.batteryDrain) * car.speed) + car.distance
 	return max_distance >= track.distance
 }
