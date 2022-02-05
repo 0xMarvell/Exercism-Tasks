@@ -46,10 +46,7 @@ If the index is out of bounds (ie. if it is negative or after the end of the sta
 RemoveItem([]int{3, 2, 6, 4, 8}, 11)
 // Output: []int{3, 2, 6, 4, 8} */
 
-// package cards
-package main
-
-import "fmt"
+package cards
 
 // GetItem retrieves an item from a slice at given position. The second return value indicates whether
 // the given index exists in the slice or not.
@@ -75,23 +72,35 @@ func SetItem(slice []int, index, value int) []int {
 
 // PrefilledSlice creates a slice of given length and prefills it with the given value.
 func PrefilledSlice(value, length int) []int {
-	panic("Please implement the PrefilledSlice function")
+	//panic("Please implement the PrefilledSlice function")
+	slice := []int{}
+	for ; length > 0; length-- {
+		slice = append(slice, value)
+	}
+	return slice
 }
 
 // RemoveItem removes an item from a slice by modifying the existing slice.
 func RemoveItem(slice []int, index int) []int {
-	panic("Please implement the RemoveItem function")
+	//panic("Please implement the RemoveItem function")
+	if len(slice) > index && index >= 0 {
+		return append(slice[:index], slice[index+1:]...)
+	}
+
+	return slice
 }
 
-func main() {
-	card, ok := GetItem([]int{1, 2, 4, 1}, 2)
-	fmt.Println(card, ok)
-	card, ok = GetItem([]int{1, 2, 4, 1}, 10)
-	fmt.Println(card, ok)
-	index := 2
-	newCard := 6
-	fmt.Println(SetItem([]int{1, 2, 4, 1}, index, newCard))
-	index = -1
-	newCard = 6
-	fmt.Println(SetItem([]int{1, 2, 4, 1}, index, newCard))
-}
+// func main() {
+// 	card, ok := GetItem([]int{1, 2, 4, 1}, 2)
+// 	fmt.Println(card, ok)
+// 	card, ok = GetItem([]int{1, 2, 4, 1}, 10)
+// 	fmt.Println(card, ok)
+// 	index := 2
+// 	newCard := 6
+// 	fmt.Println(SetItem([]int{1, 2, 4, 1}, index, newCard))
+// 	index = -1
+// 	newCard = 6
+// 	fmt.Println(SetItem([]int{1, 2, 4, 1}, index, newCard))
+// 	fmt.Println(PrefilledSlice(8, 3))
+// 	RemoveItem([]int{3, 2, 6, 4, 8}, 2)
+// }
