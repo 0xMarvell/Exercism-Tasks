@@ -55,7 +55,7 @@ import "fmt"
 // the given index exists in the slice or not.
 func GetItem(slice []int, index int) (int, bool) {
 	//panic("Please implement the GetItem function")
-	if len(slice)-1 > index {
+	if len(slice) > index && index >= 0 {
 		return slice[index], index < len(slice)-1
 	}
 	return 0, false
@@ -64,7 +64,13 @@ func GetItem(slice []int, index int) (int, bool) {
 // SetItem writes an item to a slice at given position overwriting an existing value.
 // If the index is out of range the value needs to be appended.
 func SetItem(slice []int, index, value int) []int {
-	panic("Please implement the SetItem function")
+	//panic("Please implement the SetItem function")
+	if len(slice) > index && index >= 0 {
+		slice[index] = value
+	} else {
+		slice = append(slice, value)
+	}
+	return slice
 }
 
 // PrefilledSlice creates a slice of given length and prefills it with the given value.
@@ -80,4 +86,12 @@ func RemoveItem(slice []int, index int) []int {
 func main() {
 	card, ok := GetItem([]int{1, 2, 4, 1}, 2)
 	fmt.Println(card, ok)
+	card, ok = GetItem([]int{1, 2, 4, 1}, 10)
+	fmt.Println(card, ok)
+	index := 2
+	newCard := 6
+	fmt.Println(SetItem([]int{1, 2, 4, 1}, index, newCard))
+	index = -1
+	newCard = 6
+	fmt.Println(SetItem([]int{1, 2, 4, 1}, index, newCard))
 }
