@@ -46,12 +46,19 @@ If the index is out of bounds (ie. if it is negative or after the end of the sta
 RemoveItem([]int{3, 2, 6, 4, 8}, 11)
 // Output: []int{3, 2, 6, 4, 8} */
 
-package cards
+// package cards
+package main
+
+import "fmt"
 
 // GetItem retrieves an item from a slice at given position. The second return value indicates whether
 // the given index exists in the slice or not.
 func GetItem(slice []int, index int) (int, bool) {
-	panic("Please implement the GetItem function")
+	//panic("Please implement the GetItem function")
+	if len(slice)-1 > index {
+		return slice[index], index < len(slice)-1
+	}
+	return 0, false
 }
 
 // SetItem writes an item to a slice at given position overwriting an existing value.
@@ -68,4 +75,9 @@ func PrefilledSlice(value, length int) []int {
 // RemoveItem removes an item from a slice by modifying the existing slice.
 func RemoveItem(slice []int, index int) []int {
 	panic("Please implement the RemoveItem function")
+}
+
+func main() {
+	card, ok := GetItem([]int{1, 2, 4, 1}, 2)
+	fmt.Println(card, ok)
 }
