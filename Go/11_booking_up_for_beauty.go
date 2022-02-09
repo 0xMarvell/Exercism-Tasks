@@ -35,7 +35,10 @@ Note: the return value is a time.Time and the time of day doesn't matter. */
 
 package booking
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 // Schedule returns a time.Time from a string containing a date
 func Schedule(date string) time.Time {
@@ -71,7 +74,20 @@ func IsAfternoonAppointment(date string) bool {
 
 // Description returns a formatted string of the appointment time
 func Description(date string) string {
-	panic("Please implement the Description function")
+	//panic("Please implement the Description function")
+	t, err := time.Parse("1/2/2006 15:04:05", date)
+	if err != nil {
+		panic(err)
+	}
+
+	wDay := t.Weekday()
+	mth := t.Month()
+	d := t.Day()
+	y := t.Year()
+	h := t.Hour()
+	m := t.Minute()
+
+	return fmt.Sprintf("You have an appointment on %v, %v %d, %d, at %d:%d.", wDay, mth, d, y, h, m)
 }
 
 // AnniversaryDate returns a Time with this year's anniversary
