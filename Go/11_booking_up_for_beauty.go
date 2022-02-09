@@ -40,7 +40,7 @@ import "time"
 // Schedule returns a time.Time from a string containing a date
 func Schedule(date string) time.Time {
 	//panic("Please implement the Schedule function")
-	t, err := time.Parse("14/09/1999 15:04:05", date)
+	t, err := time.Parse("1/02/2006 15:04:05", date)
 	if err != nil {
 		panic(err)
 	}
@@ -51,7 +51,7 @@ func Schedule(date string) time.Time {
 func HasPassed(date string) bool {
 	//panic("Please implement the HasPassed function")
 	now := time.Now().UTC()
-	t, err := time.Parse("September 14, 1999 15:04:05", date)
+	t, err := time.Parse("January 2, 2006 15:04:05", date)
 	if err != nil {
 		panic(err)
 	}
